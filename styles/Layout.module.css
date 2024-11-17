@@ -34,7 +34,8 @@
   margin-right: 2px;
   width: 32px;
   height: 32px;
-  background-color: rgb(4, 158, 247);
+  /* background-color: rgb(4, 158, 247);
+  background-color: rgb(12, 12, 12); */
   border-radius: 40px;
   display: flex;
   align-items: center;

@@ -20,11 +20,11 @@ export default function Home() {
               <div className={styles.profileblock}>
                 {/* <div className={styles.profileimage}></div> */}
                 <div>
-                  <div className={styles.title}>Ganesh Hemanth</div>
-                  <div className={styles.pro}>Data Scientist, Researcher</div>
+                  <div className={styles.title}>Ganesh</div>
+                  <div className={styles.pro}>Data Scientist, Researcher.</div>
                 </div>
               </div>
-              <div>
+              <div className={styles.biocon}>
                 <div className={styles.bio}>
                   Hi, I am Ganesh. I am a Data Scientist and Reseacher. I have 3
                   years of experience in the field. Previously worked at
