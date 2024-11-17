@@ -45,7 +45,7 @@ function Blog({ blogmediums }) {
         <div className={styles.date}>
           {moment().format("dddd")} , {moment().format("MMMM Do YYYY")}
         </div>
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles.s1}`}>
           <div className={styles.latestpostcon}>
             <a href={url}>
               <div className={styles.latestpost}>
