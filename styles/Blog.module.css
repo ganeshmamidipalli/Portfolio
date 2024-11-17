@@ -160,6 +160,10 @@ border-bottom: 1px solid black;
     padding-bottom: 1rem;
     font-size: 15px;
   }
+  .arrow {
+    display: inline-block;
+    transform: translateY(0.05rem);
+  }
 
   .bloggrid {
     display: grid;
