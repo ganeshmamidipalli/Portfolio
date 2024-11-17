@@ -41,7 +41,7 @@ function Blog({ blogmediums }) {
       <div className={styles.borderscon}></div>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <div className={styles.pagetitle}>Data Science Blog</div>
+          <div className={styles.pagetitle}>Blog <span className={styles.ds}>* Data Science</span> </div>
         <div className={styles.date}>
           {moment().format("dddd")} , {moment().format("MMMM Do YYYY")}
         </div>
