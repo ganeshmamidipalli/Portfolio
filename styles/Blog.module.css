@@ -4,14 +4,14 @@
 }
 
 .hero {
-  padding-top: 120px;
-  background-color: rgb(27, 27, 27);
+  padding-top: 100px;
+  background-color: rgb(10, 10, 10);
   color: white;
 }
 
 .section {
   padding: 0rem 8%;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .pagetitle {
   font-size: 40px;
@@ -21,6 +21,8 @@
 .date {
   padding: 0 8%;
   opacity: 0.5;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+  padding-bottom: 1rem;
 }
 .latestpostcon {
   padding-bottom: 4rem;
@@ -119,20 +121,21 @@ border-bottom: 1px solid black;
 
 @media (max-width: 800px) {
   .hero {
-    padding-top: 110px;
+    padding-top: 90px;
   }
   .section {
     padding: 0rem 6%;
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
   .pagetitle {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 500;
     padding: 0 6%;
   }
   .date {
     padding: 0 6%;
     padding-top: 2px;
+    padding-bottom: 1rem;
   }
   .latestpostcon {
     padding-bottom: 2rem;
