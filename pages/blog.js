@@ -40,37 +40,37 @@ function Blog({ blogmediums }) {
       </Head>
       <div className={styles.borderscon}></div>
       <main className={styles.main}>
-        <div className={styles.pagetitle}>Data Sci Blog</div>
+        <div className={styles.hero}>
+          <div className={styles.pagetitle}>Data Science Blog</div>
         <div className={styles.date}>
           {moment().format("dddd")} , {moment().format("MMMM Do YYYY")}
         </div>
-        <div className={styles.sectioncon}>
-          <div className={styles.section}>
-            <div className={styles.latestpostcon}>
-              <a href={url}>
-                <div className={styles.latestpost}>
-                  <div className={styles.latestimagecon}>
-                    <div className={styles.latestimage}>
-                      <Image
-                        src={"https:" + image.fields.file.url}
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="top"
-                        priority={true}
-                      />
-                    </div>
+        <div className={styles.section}>
+          <div className={styles.latestpostcon}>
+            <a href={url}>
+              <div className={styles.latestpost}>
+                <div className={styles.latestimagecon}>
+                  <div className={styles.latestimage}>
+                    <Image
+                      src={"https:" + image.fields.file.url}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="top"
+                      priority={true}
+                    />
                   </div>
-                  <div className={styles.latestbody}>
-                    <div className={styles.profileblock}>
-                      <div className={styles.profileimage}></div>
-                      <div className={styles.name}>Ganesh Hemanth</div>
-                    </div>
+                </div>
+                <div className={styles.latestbody}>
+                  <div className={styles.profileblock}>
+                    <div className={styles.profileimage}></div>
+                    <div className={styles.name}>Ganesh Hemanth</div>
+                  </div>
 
-                    <div className={styles.latesttitle}>{title}</div>
-                    <div className={styles.latestdesc}>
-                      {truncatedDescription}
-                    </div>
-                    <div className={styles.link}>
+                  <div className={styles.latesttitle}>{title}</div>
+                  <div className={styles.latestdesc}>
+                    {truncatedDescription}
+                  </div>
+                  <div className={styles.link}>
                     Read{" "}
                     <span>
                       {" "}
@@ -79,15 +79,18 @@ function Blog({ blogmediums }) {
                         width="12"
                         height="12"
                         alt="G"
-                        className={styles.arrow}
+                        className={`${styles.arrow} ${styles.invert}`}
                       />
                     </span>{" "}
                   </div>
-                  </div>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
+        </div> 
+        </div>
+       
+        <div className={styles.section}>
           <div className={styles.bloggrid}>
             {blogmediums.slice(1).map((blogmedium) => (
               <Blogpost key={blogmedium.sys.id} blogmedium={blogmedium} />

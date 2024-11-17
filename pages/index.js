@@ -29,8 +29,8 @@ export default function Home() {
                   Hi, I am Ganesh. I am a Data Scientist and Reseacher. I have 3
                   years of experience in the field. Previously worked at
                   Sagacious Research and Waycool Technologies. Currently
-                  pursuing masters in Business Intelligence from WSU ( Wichita
-                  State University ) .
+                  pursuing masters in Business Intelligence from Wichita
+                  State University.
                 </div>
                 <Link href="/about">
                   <div className={styles.link}>

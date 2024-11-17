@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 // import exlink from '../assets/exlink.svg'
+import arrow from '../icons/arrow.svg';
 import styles from "../styles/Blog.module.css";
 
 export default function Blogpost({ blogmedium }) {
@@ -37,7 +38,19 @@ export default function Blogpost({ blogmedium }) {
               </div>
               <div className={styles.blogtitle}>{title}</div>
               <div className={styles.desc}>{truncatedDescription}</div>
-           
+              <div className={styles.link}>
+                    Read{" "}
+                    <span>
+                      {" "}
+                      <Image
+                        src={arrow}
+                        width="12"
+                        height="12"
+                        alt="G"
+                        className={styles.arrow}
+                      />
+                    </span>{" "}
+                  </div>
             </div>
           </div>
         </a>

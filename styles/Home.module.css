@@ -29,13 +29,15 @@
   font-weight: 500;
 }
 .pro{
-  font-size: 20px;
-  color: rgb(5, 141, 231);
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(0, 0, 0, 0.6);
 }
 .bio{
   font-size: 28px;
-  line-height: 155%;
+  line-height: 150%;
   padding-bottom: 2rem;
+  font-weight: 450;
 }
 .arrow{
   display: inline-block;
@@ -79,7 +81,7 @@
     font-size: 18px;
   }
   .bio{
-    font-size: 21px;
+    font-size: 19px;
    
   }
   .grid2x{
