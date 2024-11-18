@@ -72,7 +72,6 @@ function Layout({ children }) {
               <div className={styles.name}>ganesh</div>
             </Link> */}
           </div>
-          <div className={styles.webonly}>
             <div className={styles.menucon}>
               <Link href="/about">
                 <div
@@ -102,16 +101,11 @@ function Layout({ children }) {
                 </div>
               </Link>
             </div>
-          </div>
-          {/* <div className={styles.mobileonly}>
-            <div className={styles.mblock} onClick={toggleClass}>
-              {isActive ? "Close" : "Menu"}
-            </div>
-          </div> */}
+        
         </header>
       </div>
 
-      <div className={styles.mobileonly}>
+      {/* <div className={styles.mobileonly}>
         <div  className={styles.mobilenav}>
          <div
           className={styles.menubar}
@@ -147,7 +141,7 @@ function Layout({ children }) {
         </div>  
         </div>
        
-      </div>
+      </div> */}
 
       <main>
         <div>{children}</div>
