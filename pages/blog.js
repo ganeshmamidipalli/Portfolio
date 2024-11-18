@@ -95,10 +95,15 @@ function Blog({ blogmediums }) {
 
         <div className={styles.section}>
           <div className={styles.bloggrid}>
+            <div></div>
+            <div >
             {blogmediums.slice(1).map((blogmedium) => (
               <Blogpost key={blogmedium.sys.id} blogmedium={blogmedium} />
             ))}
           </div>
+          </div>
+
+          
         </div>
       </main>
     </div>
