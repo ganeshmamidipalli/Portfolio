@@ -72,7 +72,7 @@ export default function Home({ blogmediums }) {
           </section>
           <div className={styles.section}>
             <div className={styles.grid2x}>
-              <div className={styles.gridtitle}>Writing</div>
+              <div className={styles.gridtitle}> <span className={styles.circle}></span> Writing</div>
               <div>
                 <div className={styles.bloggrid}>
                   {blogmediums.slice(0,1).map((blogmedium) => (
@@ -94,7 +94,7 @@ export default function Home({ blogmediums }) {
           </div>
           <div className={styles.section}>
             <div className={styles.grid2x}>
-              <div className={styles.gridtitle}>Research</div>
+              <div className={styles.gridtitle}><span className={styles.circle}></span> Research</div>
               <div></div>
             </div>
           </div>
