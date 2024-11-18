@@ -60,8 +60,8 @@ function Layout({ children }) {
               <div className={styles.logocon}>
                 <Image
                   src={logo}
-                  width="32"
-                  height="32"
+                  width="36"
+                  height="36"
                   alt="G"
                   className={styles.logo}
                 />

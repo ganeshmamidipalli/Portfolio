@@ -42,9 +42,9 @@ export default function Home({ blogmediums }) {
                 <div>
                   <div className={styles.title}>Ganesh</div>
                   <div className={styles.pro}>Data Scientist, Researcher.</div>
-                  <div className={styles.date}>
-           {moment().format("Do MMM YYYY")}
-          </div>
+                  {/* <div className={styles.date}>
+                    {moment().format("Do MMM YYYY")}
+                  </div> */}
                 </div>
               </div>
               <div className={styles.biocon}>
@@ -75,29 +75,29 @@ export default function Home({ blogmediums }) {
           </section>
           <div className={styles.section}>
             <div className={styles.grid2x}>
-              <div className={styles.gridtitle}> <span className={styles.circle}></span> Writing</div>
+              <div className={styles.gridtitle}>
+                {" "}
+                <span className={styles.circle}></span> Writing
+              </div>
               <div>
                 <div className={styles.bloggrid}>
-                  {blogmediums.slice(0,1).map((blogmedium) => (
+                  {blogmediums.slice(0, 1).map((blogmedium) => (
                     <Blogpost key={blogmedium.sys.id} blogmedium={blogmedium} />
                   ))}
                 </div>
                 <div className={styles.btncon}>
-
                   <Link href="/blog">
-                    <div className={styles.btn}>
-                      View Blog
-                    </div>
+                    <div className={styles.btn}>View Blog</div>
                   </Link>
                 </div>
-               
-                
               </div>
             </div>
           </div>
           <div className={styles.section}>
             <div className={styles.grid2x}>
-              <div className={styles.gridtitle}><span className={styles.circle}></span> Research</div>
+              <div className={styles.gridtitle}>
+                <span className={styles.circle}></span> Research
+              </div>
               <div></div>
             </div>
           </div>
