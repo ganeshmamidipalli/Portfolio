@@ -24,7 +24,7 @@ function Layout({ children }) {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < 40 || isActive) {
+      if (currentScrollY < 40) {
         setIsShown(true);
       } else if (currentScrollY < lastScrollY) {
         setIsShown(true);
@@ -103,17 +103,18 @@ function Layout({ children }) {
               </Link>
             </div>
           </div>
-          <div className={styles.mobileonly}>
+          {/* <div className={styles.mobileonly}>
             <div className={styles.mblock} onClick={toggleClass}>
               {isActive ? "Close" : "Menu"}
             </div>
-          </div>
+          </div> */}
         </header>
       </div>
 
       <div className={styles.mobileonly}>
-        <div
-          className={styles[isActive ? "menubar" : "nomenubar"]}
+        <div  className={styles.mobilenav}>
+         <div
+          className={styles.menubar}
           onClick={toggleClass}
         >
           <Link href="/about">
@@ -143,7 +144,9 @@ function Layout({ children }) {
               Research
             </div>
           </Link>
+        </div>  
         </div>
+       
       </div>
 
       <main>

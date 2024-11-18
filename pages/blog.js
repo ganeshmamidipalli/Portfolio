@@ -101,9 +101,7 @@ function Blog({ blogmediums }) {
               <Blogpost key={blogmedium.sys.id} blogmedium={blogmedium} />
             ))}
           </div>
-          </div>
-
-          
+          </div>  
         </div>
       </main>
     </div>

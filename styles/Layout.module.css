@@ -126,32 +126,32 @@
     .mblock{
      height: max-content;
     }
-    .menubar{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 99;
-        background-color: white;
-        padding: 100px 6%;
+    .mobilenav{
+      position: fixed;
+      top: unset;
+      bottom: 5vw;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
     }
-.nomenubar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0vh;
-    transform: translateY(-100%);
-    z-index: 99;
-    background-color: white; 
-    overflow: hidden;
-    padding: 100px 6%;
-}
+    .menubar{
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8%;
+      height: 50px;
+      border-radius: 30px;
+      border: 1px solid rgb(0, 0, 0, 0.05);
+      width: 100%;
+    }
+
 .menux{
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 1rem;
 }
 .activex{
     color: rgb(4, 158, 247);
