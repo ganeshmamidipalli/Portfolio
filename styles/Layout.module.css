@@ -108,7 +108,7 @@
       }
     .header{
         padding: 0 6%;
-        height: 60px;
+        height: 50px;
         display: flex;
         justify-content: space-between;
     }
@@ -133,7 +133,7 @@
       left: 0;
       width: 100%;
       z-index: 100;
-      padding: 0 8%;
+      padding: 0 10%;
       display: flex;
       align-items: center;
     }
@@ -147,6 +147,7 @@
       border-radius: 30px;
       border: 1px solid rgb(0, 0, 0, 0.05);
       width: 100%;
+      padding-bottom: 2px;
     }
 
 .menux{
