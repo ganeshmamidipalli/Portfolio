@@ -3,8 +3,28 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import arrow from "../icons/arrow.svg";
+import Blogpost from "../components/Blogpost.js";
+import moment from "moment";
+import { createClient } from "contentful";
 
-export default function Home() {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const res = await client.getEntries({ content_type: "blogmedium" });
+  const blogmediums = res.items;
+
+  return {
+    props: {
+      blogmediums,
+    },
+    revalidate: 1,
+  };
+}
+
+export default function Home({ blogmediums }) {
   return (
     <>
       <Head>
@@ -29,8 +49,8 @@ export default function Home() {
                   Hi, I am Ganesh. I am a Data Scientist and Reseacher. I have 3
                   years of experience in the field. Previously worked at
                   Sagacious Research and Waycool Technologies. Currently
-                  pursuing masters in Business Intelligence from Wichita
-                  State University.
+                  pursuing masters in Business Intelligence from Wichita State
+                  University.
                 </div>
                 <Link href="/about">
                   <div className={styles.link}>
@@ -50,6 +70,34 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <div className={styles.section}>
+            <div className={styles.grid2x}>
+              <div className={styles.gridtitle}>Writing</div>
+              <div>
+                <div className={styles.bloggrid}>
+                  {blogmediums.slice(0,1).map((blogmedium) => (
+                    <Blogpost key={blogmedium.sys.id} blogmedium={blogmedium} />
+                  ))}
+                </div>
+                <div className={styles.btncon}>
+
+                  <Link href="/blog">
+                    <div className={styles.btn}>
+                      View Blog
+                    </div>
+                  </Link>
+                </div>
+               
+                
+              </div>
+            </div>
+          </div>
+          <div className={styles.section}>
+            <div className={styles.grid2x}>
+              <div className={styles.gridtitle}>Research</div>
+              <div></div>
+            </div>
+          </div>
         </main>
       </div>
     </>

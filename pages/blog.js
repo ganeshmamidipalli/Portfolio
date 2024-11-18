@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import arrow from "../icons/arrow.svg";
+import arrow from "../icons/exa.svg";
 import styles from "../styles/Blog.module.css";
 import Blogpost from "../components/Blogpost.js";
 import moment from "moment";
@@ -41,55 +41,58 @@ function Blog({ blogmediums }) {
       <div className={styles.borderscon}></div>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <div className={styles.pagetitle}>Blog <span className={styles.ds}>* Data Science</span> </div>
-        <div className={styles.date}>
-          {moment().format("dddd")} , {moment().format("MMMM Do YYYY")}
-        </div>
-        <div className={`${styles.section} ${styles.s1}`}>
-          <div className={styles.latestpostcon}>
-            <a href={url}>
-              <div className={styles.latestpost}>
-                <div className={styles.latestimagecon}>
-                  <div className={styles.latestimage}>
-                    <Image
-                      src={"https:" + image.fields.file.url}
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="top"
-                      priority={true}
-                    />
-                  </div>
-                </div>
-                <div className={styles.latestbody}>
-                  <div className={styles.profileblock}>
-                    <div className={styles.profileimage}></div>
-                    <div className={styles.name}>Ganesh Hemanth</div>
-                  </div>
-
-                  <div className={styles.latesttitle}>{title}</div>
-                  <div className={styles.latestdesc}>
-                    {truncatedDescription}
-                  </div>
-                  <div className={styles.link}>
-                    Read{" "}
-                    <span>
-                      {" "}
-                      <Image
-                        src={arrow}
-                        width="12"
-                        height="12"
-                        alt="G"
-                        className={`${styles.arrow} ${styles.invert}`}
-                      />
-                    </span>{" "}
-                  </div>
-                </div>
-              </div>
-            </a>
+          <div className={styles.pagetitle}>
+           Blog
+            {/* <span className={styles.ds}>* Data Science</span>  */}
           </div>
-        </div> 
+          <div className={styles.date}>
+            {moment().format("dddd")} , {moment().format("MMMM Do YYYY")}
+          </div>
+          <div className={`${styles.section} ${styles.s1}`}>
+            <div className={styles.latestpostcon}>
+              <a href={url}>
+                <div className={styles.latestpost}>
+                  <div className={styles.latestimagecon}>
+                    <div className={styles.latestimage}>
+                      <Image
+                        src={"https:" + image.fields.file.url}
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="top"
+                        priority={true}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.latestbody}>
+                    <div className={styles.profileblock}>
+                      <div className={styles.profileimage}></div>
+                      <div className={styles.name}>Ganesh Hemanth</div>
+                    </div>
+
+                    <div className={styles.latesttitle}>{title}</div>
+                    <div className={styles.latestdesc}>
+                      {truncatedDescription}
+                    </div>
+                    <div className={styles.link}>
+                      Read in  Medium{" "}
+                      <span>
+                        {" "}
+                        <Image
+                          src={arrow}
+                          width="12"
+                          height="12"
+                          alt="G"
+                          className={`${styles.arrow} ${styles.invert}`}
+                        />
+                      </span>{" "}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-       
+
         <div className={styles.section}>
           <div className={styles.bloggrid}>
             {blogmediums.slice(1).map((blogmedium) => (
