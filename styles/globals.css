@@ -14,7 +14,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg);
 }
 
 body {
@@ -26,11 +26,12 @@ body {
 }
 :root {
   --red: #fd1313;
-  --red:rgb(247, 22, 22);
+  --red: rgb(247, 22, 22);
   --blue: rgb(22, 118, 243);
   --dark: #131313;
-  --light:white;
-  }
+  --light: white;
+  --bg: rgb(247, 247, 247);
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -52,42 +53,41 @@ a {
   }
 }
 
-
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-300.ttf');
+  src: url("../fonts/geo/Aspekta-300.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-350.ttf');
+  src: url("../fonts/geo/Aspekta-350.ttf");
   font-weight: 350;
 }
 
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-400.ttf');
+  src: url("../fonts/geo/Aspekta-400.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-450.ttf');
+  src: url("../fonts/geo/Aspekta-450.ttf");
   font-weight: 450;
 }
-  
+
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-500.ttf');
+  src: url("../fonts/geo/Aspekta-500.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-550.ttf');
+  src: url("../fonts/geo/Aspekta-550.ttf");
   font-weight: 550;
 }
-  
+
 @font-face {
   font-family: "Geo";
-  src: url('../fonts/geo/Aspekta-600.ttf');
+  src: url("../fonts/geo/Aspekta-600.ttf");
   font-weight: 600;
 }

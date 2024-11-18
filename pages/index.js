@@ -42,6 +42,9 @@ export default function Home({ blogmediums }) {
                 <div>
                   <div className={styles.title}>Ganesh</div>
                   <div className={styles.pro}>Data Scientist, Researcher.</div>
+                  <div className={styles.date}>
+           {moment().format("Do MMM YYYY")}
+          </div>
                 </div>
               </div>
               <div className={styles.biocon}>
